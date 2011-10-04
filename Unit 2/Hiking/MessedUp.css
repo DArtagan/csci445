@@ -1,0 +1,13 @@
+
+div#menu {
+	position: absolute;
+	right: -20px;
+	top: 50px;
+}
+
+
+div#content {
+	position: fixed;
+	left: 20px;
+	top: 50px;
+}

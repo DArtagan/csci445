@@ -1,0 +1,9 @@
+body {
+	margin-right: 300px;
+}
+
+div#menu {
+	position: absolute;
+	right: 20px;
+	top: 50px;
+}

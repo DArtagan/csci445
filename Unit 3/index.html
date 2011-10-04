@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Meeting Time Request Form</title>
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body>
+  <h1>Meeting Time Request Form</h1>
+  <form name="contact_form" action="" onsubmit="return validateForm()" method="post">
+    <script type="text/javascript">
+      checkNameCookie();
+    </script>
+    <input type="checkbox" name="conditions" value="important" id="important" /><label for="important">Important</label><br />
+    <input type="checkbox" name="conditions" value="know_location" id="know_location" checked="checked" /><label for="know_location">I know of a meeting place, its type is:</label><br />
+    <select name="setting" id="setting">
+      <optgroup label="Setting Type">
+        <option value="food">Library</option>
+        <option value="food">Classroom</option>
+        <option value="food">Food</option>
+        <option value="saab">Movie</option>
+        <option value="mercedes">House/Apartment</option>
+        <option value="audi">Outdoors</option>
+        <option value="audi">Other</option>
+      </optgroup>
+    </select><br /><br />
+    Meeting type:<br />
+    <input type="radio" name="category" value="school" id="school" /><label for="school">School</label><br />
+    <input type="radio" name="category" value="work" id="work" /><label for="work">Work</label><br />
+    <input type="radio" name="category" value="social" id="social" /><label for="social">Social</label><br />
+    <input type="radio" name="category" value="other" id="other" /><label for="other">Other</label><br /><br />
+    <textarea rows="10" cols="80" name="reason" id="reason" >Delete this text and write why you need to see me.</textarea>
+    <input type="reset" value="Reset" />
+    <input type="submit" value="Submit" />
+  </form>
+  <img src="w.png" />
+</body>
+
+</html> 

@@ -1,0 +1,35 @@
+Chapter 5
+1.) Describe the two event flow models (capturing and bubbling)
+Capturing: An event is handled initially by the parent and then by the child element.
+Bubbling: Descendants recieve the event first, then the parent does, and so on up the hierarchy.  
+
+2.) Discuss innerHTML vs DOM methods (should be at least two paragraphs)
+innerHTML allows one to set or get the descendent elements of an element with a string.  The problem is that its implementation has not been standardized across browsers.  One benefit of innerHTML over DOM methods is that the innerHTML is faster because it does not analyze the HTML that it is handling for exceptions.  DOM Methods such as createElement and setAttribute explicitly set elements and will analyze the code they handle for problems.  In comparison to innerHTML these methods are slower, more reliable, and have already been accepted as standard.
+
+
+Chapter 7
+1.) List the 3 kinds of browser shortcomings.  Which is the worst? Why?
+Complete lack of support for a feature
+Partial support for a feature
+Buggy support for a feature.  This is the worst shortcoming as one cannot utilize a feature and expect that feature to work in the same way.  It's not that the feature will either work or won't work.  It's that feature may or may not behave a certain way.
+
+2.)What is quirks mode? Why does it exist? How do you cause a browser to be in quirks mode? Would you write a page in quirks mode?
+Quirks mode came about as way to render the old, non-standard web pages.  If these pages were rendered as if they were standards complient, they would often break.  By making an HTML page with no DOCTYPE or a DOCTYPE with no URL, the browser is more likely to render the page in quirks mode.  For no practical reason would I want to write a page in quirks mode. 
+
+3.) Explain X-UA-Compatible
+The use of the meta tag <meta http-equiv="X-U-A-Compatible" content="x"> tells the browser specified in content to use the rendering engine specified in content.  eg: "IE=EmulateIE7" will have the browser render the page as if it was being rendered by Internet Explorer 7.
+
+4.) Describe a common browser bug OR discuss hacking (as it applies to web pages).  This should be several paragraphs.
+The Box-Model Bug
+Internet explorer 5 and 5.5 rendered the width of an element (when combined with margin, padding, or border) strangely.  It is the specification of the W3 that the width of an element specifies the width of the content within that element.  Padding, border, and margin then add width on top of that.  Take for example an element with:
+	border:15px;
+	padding:5px;
+	width:940px;
+According to standards this element would take up 980px of horizontal space.  The problem was that IE 5 and 5.5 would take the width as the total horizontal space, in this case giving 940px.  So that instead of adding additional spacing to the content (as specification states) the content's internal spacing was used up to accomidate the margin, border, and padding.  IE 5 and 5.5 treated height in the same way as width was treated in this case.
+There came to be many hacks that addressed this problem.  One of them, the Tantek hack, declares the width and then overwrites that width by redeclaring it, taking advantage of a parsing bug in IE.  
+
+5.)What is the purpose of Dean Edward's JavaScript libraries? What are the drawbacks?
+The purpose is of this library is "to make Microsoft Internet Explorer behave like a standards-compliant browser".  However, this library can't work if the user has JavaScript disabled.  Additionally, this library is likely to slow down website performance.
+
+6.) Explain how local and global variables are created/used in JavaScript.
+Local variables are created in a function and their lifetime is as long as that function is in use.  Global variables are any variable declared outside a function.  These are always accessible by the scripts on that page.

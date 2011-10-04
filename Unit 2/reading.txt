@@ -1,0 +1,23 @@
+1. Provide an explanation of CSS selectors.
+Type selectors match the element that they are selecting.  Unless otherwise reduced they will affect all instances of that element.  i.e.: "p" selects all paragraphs
+Class selectors use the "." to precede the class name.  They apply to all elements with that class unless otherwise reduced.  i.e.: ".joy" anything with the joy class
+Id selector names are preceded by "#".  This will apply to all elements in the document with the specified id, unless otherwise reduced.  i.e.: "div#hello" all divs with the hello id
+Descendant selectors are seperated from their parent selector by a space.  All elements that are children of the parent and have the descendant selector will be used.  i.e.: "div h1" affects all h1 with a div element
+Child selectors are seperated by their parents by a ">".  These are only the direct children of the parent, not any descendants.  i.e.: div>p affects all the paragraphs that are direct children of the div element
+Dynamic selectors respond to the actions of the user.  These include: 
+"hover", when the mouse hovers over the element.
+"active" takes effect during the time the user interacts (clicks) with the element.
+"visited" applies primarily to links and takes affect after the user has visited the page that is linked to.
+"focus" is liked hover but for when the keyboard is focused on the element.  i.e. the user is using "tab" to navigate the document
+
+2. Explain inheritance and specificity.
+It is often the default for child elements in an HTML file to inherit their parent's CSS styling if no other style is specified for them.  This is an efficient feature of CSS, allowing things such as font details to be specified for the whole document, and then just modified for individual cases.  Specificity is the name for the system that determines in what order of priority styles are applied.  Declarations with an id in them have priority over ones with a class which come before ones without anything.  The more specific to the element a declaration is, the higher priority it gets.  Finally, if two statements rank equally, the one further down the page gets priority.  
+
+3. Explain the em unit.  
+1 em represents the given font size for an element.  Think of an em as the given value times the original font size.  So a property with a value of "2 em" would have a size twice that of the original font size.
+
+4. Explain how the font-family property works.
+The font-family property can have a value that is a list of fonts.  These fonts will be addressed in sequence from first to last.  So if the user's computer does not have a given font, that font is ignored and the next font in sequence is addressed.  Each font declaration is addressed and ignored until the browser comes upon a font that the user has installed.  That font is the one implemented and the rest of the list is ignored.
+
+5. Explain the difference between margin and padding.  What are collapsing margins?
+Padding is the space between content and the border.  Margin is the space between the border and the outside of the element.  Collapsing margins happen when a bottom margin of an element directly ajoins a top margin of a element directly below.  When this is a case whichever element has the larger vertical margin takes effect and the other vertical margin is discarded.

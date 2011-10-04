@@ -1,0 +1,26 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+div#styleSelector {
+	float: right;
+	margin: 20px;
+}
+
+div#header {
+	margin: 0px 0px 30px;
+	padding: 10px 20px 20px;
+}
+
+div#menu {
+	float: left;
+	padding: 0px 10px;
+	margin: 0px 40px 0px 25px;
+	width: 220px;
+}
+
+div#content {
+	margin: 0px 30px 50px 245px;
+	padding: 20px 65px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Willy's Class Schedule</title>
+</head>
+
+<body>
+  <h1>Willy's Class Schedule</h1>
+  
+  <table border="1" cellpadding="7" rules="cols" width="95%">
+    <thead>
+      <tr valign="bottom">
+        <th></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+    </thead>
+    <tfoot valign="top">
+      <tr>
+        <td colspan="6">This table brought to you by William Weiskopf&nbsp;<img src="w.png" width="30" alt="" /></td>
+       </tr>
+    </tfoot>
+    <tbody valign="top">
+      <tr>
+        <td scope="row">9:00-9:50</td>
+        <td>Fluid Mechanics</td>
+        <td></td>
+        <td>Fluid Mechanics</td>
+        <td></td>
+        <td>Fluid Mechanics</td>
+      </tr>
+      <tr>
+        <td scope="row">10:00-10:50</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td scope="row">11:00-11:50</td>
+        <td>Differential Equations</td>
+        <td></td>
+        <td>Differential Equations</td>
+        <td></td>
+        <td>Differential Equations</td>
+      </tr><tr>
+        <td scope="row">12:00-12:50</td>
+        <td>Data Structures</td>
+        <td>Neuroscience</td>
+        <td>Data Structures</td>
+        <td>Neuroscience</td>
+        <td>Data Structures</td>
+      </tr><tr>
+        <td scope="row">13:00-13:50</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr><tr>
+        <td scope="row">14:00-14:50</td>
+        <td>Thermodynamics</td>
+        <td></td>
+        <td>Thermodynamics</td>
+        <td></td>
+        <td>Thermodynamics</td>
+      </tr><tr>
+        <td scope="row">15:00-15:50</td>
+        <td>Fluid Mechanics Recitation</td>
+        <td></td>
+        <td>Thermodynamics Recitation</td>
+        <td></td>
+        <td></td>
+      </tr><tr>
+        <td scope="row">16:00-16:50</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr><tr>
+        <td scope="row">17:00-17:50</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr><tr>
+        <td scope="row">18:00-18:50</td>
+        <td>Intro to Space Exploration</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <h2>Meeting time request form</h2>
+  <form>
+    <label for="whole_name">Name: </label><input type="text" name="whole_name" id="whole_name" /><br /><br />
+    <input type="checkbox" name="conditions" value="important" id="important" /><label for="important">Important</label><br />
+    <input type="checkbox" name="conditions" value="know_location" id="know_location" checked="checked" /><label for="know_location">I know of a meeting place, its type is:</label><br />
+    <select name="setting" id="setting">
+      <optgroup label="Setting Type">
+        <option value="food">Library</option>
+        <option value="food">Classroom</option>
+        <option value="food">Food</option>
+        <option value="saab">Movie</option>
+        <option value="mercedes">House/Apartment</option>
+        <option value="audi">Outdoors</option>
+        <option value="audi">Other</option>
+      </optgroup>
+    </select><br /><br />
+    Meeting type:<br />
+    <input type="radio" name="reason" value="school" id="school" /><label for="school">School</label><br />
+    <input type="radio" name="reason" value="work" id="work" /><label for="work">Work</label><br />
+    <input type="radio" name="reason" value="social" id="social" /><label for="social">Social</label><br />
+    <input type="radio" name="reason" value="other" id="other" /><label for="other">Other</label><br /><br />
+    <textarea rows="10" cols="80" name="reason" id="reason" >Delete this text and write why you need to see me.</textarea>
+    <input type="reset" value="Reset" />
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+
+</html> 

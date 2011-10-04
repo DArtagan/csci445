@@ -1,0 +1,28 @@
+===========================
+William Weiskopf
+October 3, 2011
+CSCI 445
+===========================
+
+1. What is interpolation? Include a brief example.
+	Interpolation happens when a string in enclosed by double quotes ("x").  When this is true a variable (led by $) will be substituted for its value.  For example:
+	<?php 
+		$greeting = "Hello there,";
+		echo "$greeting how are you today?";
+	?>
+	would output:
+		Hello there, how are you today?
+
+2. What is the purpose of the define function?
+	The purpose of the define function is to define a variable as a constant and give it a value, at runtime.
+
+3. Describe the six rules for scope of a variable.
+	supergloabl: visible everywhere in the script
+	constants: always globally visible
+	global: visible throughout that script, but not inside functions
+	global inside function: refer to the gloval variables of the same name
+	static inside function: only and always visible within that one function
+	declared inside function: only exist as long as the instance of that function
+	
+4. Explain the difference between isset() and empty().
+	isset() returns true if all given variables are set, false if otherwise.  empty() checks if a value for that variable is unset or zero and returns true, else it returns false.  The key difference is that they do opposite things and that empty() also considers values of zero.
