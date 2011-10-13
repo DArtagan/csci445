@@ -10,7 +10,6 @@
         exit;
       }
       
-      $order = fgets($fp, 999);
       if( $order == "" ) {
         ?><p style="font-weight: bold;">No orders pending, try again some other time.</p><?php
       } else {
@@ -19,11 +18,20 @@
       
       while(!feof($fp)) {
         $order = fgets($fp, 999);
+        $grandtotal += (double) substr((strstr($order, '$')), 1);
         echo $order . "<br />";
       }
+      echo '<p>The grand total of all orders: $' . $grandtotal . '</p>';
+      fclose($fp);
+      
+      $row = 1;
+      if (($fp = fopen("orders.txt", "r")) !== FALSE) {
+        while (($data = fgetcsv($fp, 1000, ",")) !== FALSE) {
+            $num = count($orders);
+            $row++;
+        }
+      }
+      fclose($fp);
     ?>
   </body>
 </html>
-      $grandtotal = 0;
- $grandtotal += $item['qty'] * $item['price'];
-       echo "<p>Grand Total: $" . $grandtotal . "</p>;

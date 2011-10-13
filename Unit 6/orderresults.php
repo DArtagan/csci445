@@ -11,12 +11,8 @@
     <h1>Willy's Pack &amp; Ship</h1>
     <h2>Order Results</h2>
     <p>Order processed at <?php $date = date("D F j, Y; g:i A"); echo $date; ?>.</p>
-    <p>You ordered <?php 
-      /*$boxqty = $_POST['boxqty'];
-      $tapeqty = $_POST['tapeqty'];
-      $peanutqty = $_POST['peanutqty'];
-	  
-	  $ages = array("Peter"=>32, "Quagmire"=>30, "Joe"=>34); */
+    <p>You ordered 
+    <?php 
 	  $items = array(
 		"box" => array(
 			"name" => "box",
@@ -70,33 +66,40 @@
 	  ?></p>
       <p>Grand Total (including tax): <?php 
 		$tax = .08;
-		echo '$' . number_format(($subtotal*(1+$tax)), 2);
+    $grandtotal = $subtotal*(1+$tax);
+		echo '$' . number_format($grandtotal, 2);
 	  ?></p>
     <?php 
       $outputstring = $date . "\t";
       
-      foreach($items as $item) {\
+      $test = FALSE;
+      foreach($items as $item) {
+        if($item['qty'] != 0 && $item['qty'] != NULL) $test = TRUE;
         if( $item['qty'] > 0) {
           $outputstring .= $item['qty'] . " " . $item['name'];
           if($item['size'] != NULL) $outputstring .= " (" . $item['size'] . ")";
-          $outputstring .= "\t";
+          $outputstring .= ",\t";
         }
       }
+      $outputstring = substr($outputstring,0,-2);
+      $outputstring .= ': $' . $grandtotal;
       $outputstring .= "\n";
-      
-      @ $fp = fopen('orders.txt', 'ab');
-      flock($fp, LOCK_EX);
-      if(!$fp) {
-        ?><p style="font-weight: bold;">Your order could not be processed, please try again later.</p><?php
-        exit;
+        
+      if($test == TRUE){
+        @ $fp = fopen('orders.txt', 'ab');
+        flock($fp, LOCK_EX);
+        if(!$fp) {
+          ?><p style="font-weight: bold;">Your order could not be processed, please try again later.</p><?php
+          exit;
+        }
+        
+        fwrite($fp, $outputstring, strlen($outputstring));
+        flock($fp, LOCK_UN);
+        fclose($fp);
       }
-      
-      fwrite($fp, $outputstring, strlen($outputstring));
-      flock($fp, LOCK_UN);
-      fclose($fp);
       
       echo "<p>Your order has been recorded.</p>";
     ?>
-    <p><a href="orderlist.php">View a list of all orders.</a></p>
+    <p><a href="orderlist.php">View a list of all orders.</a><br /><a href="orderform.html">Order Again</a></p>
   </body>
 </html>
