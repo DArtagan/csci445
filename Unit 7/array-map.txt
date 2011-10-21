@@ -1,0 +1,40 @@
+array(5) { [0]=> array(4) {	["meta"]=> array(2) { 	["date"]=> string(29) "Thu October 20, 2011; 9:44 PM" 
+													["name"]=> string(14) "Willy Weiskopf" } 
+							["box"]=> array(2) { 	["qty"]=> string(1) "3" 
+													["size"]=> string(6) "medium" } 
+							["tape"]=> array(2) { 	["qty"]=> string(1) "9" 
+													["size"]=> NULL } 
+							["biodegradable packing peanut"]=> array(2) { ["qty"]=> string(2) "81" 
+													["size"]=> NULL } } 
+			[1]=> array(4) { ["meta"]=> array(2) { 	["date"]=> string(29) "Thu October 20, 2011; 9:44 PM" 
+													["name"]=> string(2) "Me" } 
+							["box"]=> array(2) { 	["qty"]=> string(1) "4" 
+													["size"]=> string(5) "small" } 
+							["tape"]=> array(2) { 	["qty"]=> string(2) "16" 
+													["size"]=> NULL } 
+							["biodegradable packing peanut"]=> array(2) { ["qty"]=> string(3) "256" 
+													["size"]=> NULL } } 
+			[2]=> array(4) { ["meta"]=> array(2) { 	["date"]=> string(29) "Thu October 20, 2011; 9:47 PM" 
+													["name"]=> string(3) "Bob" } 
+							["box"]=> array(2) { 	["qty"]=> string(1) "1" 
+													["size"]=> string(5) "large" } 
+							["tape"]=> array(2) { 	["qty"]=> string(1) "1" 
+													["size"]=> NULL } 
+							["biodegradable packing peanut"]=> array(2) { ["qty"]=> string(1) "1" 
+													["size"]=> NULL } } 
+			[3]=> array(4) { ["meta"]=> array(2) { 	["date"]=> string(29) "Thu October 20, 2011; 9:49 PM" 
+													["name"]=> string(5) "Again" } 
+							["box"]=> array(2) { 	["qty"]=> string(1) "4" 
+													["size"]=> string(5) "small" } 
+							["tape"]=> array(2) { 	["qty"]=> string(2) "98" 
+													["size"]=> NULL } 
+							["biodegradable packing peanut"]=> array(2) { ["qty"]=> string(1) "8" 
+													["size"]=> NULL } } 
+			[4]=> array(4) { ["meta"]=> array(2) { 	["date"]=> string(30) "Thu October 20, 2011; 11:07 PM" 
+													["name"]=> string(3) "Tom" } 
+							["box"]=> array(2) { 	["qty"]=> string(1) "5" 
+													["size"]=> string(6) "medium" } 
+							["tape"]=> array(2) { 	["qty"]=> string(3) "345" 
+													["size"]=> NULL } 
+							["biodegradable packing peanut"]=> array(2) { ["qty"]=> string(2) "94" 
+													["size"]=> NULL } } } 

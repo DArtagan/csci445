@@ -12,7 +12,7 @@
     <div>
       <?php require('menu.php'); ?>
     </div>
-    <div style="margin-left: 175px;">
+    <div style="margin-left: 200px;">
       <h2>Order Form</h2>
       <form action="orderresults.php" method="post">
         <p>Customer Name: <input type="text" name="customerName" /></p>

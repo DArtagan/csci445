@@ -11,7 +11,7 @@
         $i++;        
       }   
     }
-    closedir($handle); // We're not using it anymore
+    closedir($handle);
     
     shuffle($files);
     
