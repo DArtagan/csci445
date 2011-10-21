@@ -11,7 +11,7 @@
     <h1>Willy's Pack &amp; Ship</h1>
     <h2>Order Results</h2>
     <p>Order processed at <?php $date = date("D F j, Y; g:i A"); echo $date; ?>.</p>
-    <p>You ordered 
+    <p>Thank you <?php echo $_POST['customerName'] ?>, you ordered:
     <?php 
       $items = array(
       "box" => array(

@@ -30,11 +30,17 @@
         }
       }
       
+      // Sort ordersby customer
+      function customerComparer($x, $y) {
+        return strcmp($x['meta']['name'], $y['meta']['name']);
+      }
+      usort($orders, customerComparer);
+      
       $grandtotal = 0;
       echo '<ol>';
       for($i = 0; $i < count($orders); $i++) {
         $total = 0;
-        $outputString = $orders[$i]['meta']['date'] . '; ';
+        $outputString = $orders[$i]['meta']['name'] . " @ " . $orders[$i]['meta']['date'] . '; ';
         foreach($orders[$i] as $item => $row) {
           if($item != 'meta') {
             $outputString .= $orders[$i][$item]['qty'] . ' ';
