@@ -77,9 +77,12 @@
       
       foreach($items as $item) {
         if( $item['qty'] > 0) {
-          $outputstring .= $item['qty'] . " " . $item['name'];
-          if($item['size'] != NULL) $outputstring .= " (" . $item['size'] . ")";
-          $outputstring .= "\t";
+          $outputstring .= $item['name'] . "\t" . $item['qty'] . "\t";
+          if($item['size'] != NULL) {
+            $outputstring .= $item['size'] . "\t";
+          } else {
+            $outputstring .= "none\t";
+          }
         }
       }
       $outputstring .= "\n";
@@ -97,5 +100,9 @@
       
       echo "<p>Your order has been recorded.</p>";
     ?>
+    <ul>
+      <li><a href="orderform.html">New order</a></li>
+      <li><a href="orderlist.php">View full list</a></li>
+    </ul>
   </body>
 </html>
