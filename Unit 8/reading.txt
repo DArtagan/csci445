@@ -1,0 +1,22 @@
+1.) Explain the difference between a full join and an equi-join. Use the (very small) tables below in your explanation. HINT: You can create these tables in MySQL and type in the select statements to see the effect.
+	A full join completly combines the two tables involved, creating a row for each possible combination when two column names are equal.  
+	
+	[Cyndi, 1500 Illinois St, 1, 20	]
+	[Jody, CSM, 1, 15				]
+	[NULL, NULL, 2, 12				]
+	
+	An equi-join just shows the relationship(s) specified by WHERE and a =(in the following case, WHERE customers.ID = custOrders.custID).  This allows matching when the column names aren't the same.
+
+	[Cyndi, 1500 Illinois St, 1, 20	]
+	[Cyndi, 1500 Illinois St, 2, 15	]
+	[Jody, CSM, 3, 12				]
+
+2.) What is a left join? Extend the tables below to provide an example.
+	Left join returns all rows in the left table, regardless of whether they have a match with the right table.  If they don't have a match, those values that would be there if they existed are replaced by NULL.
+	
+	[1, Cyndi, 1500 Illinois St	] left joined with	[1, 20] outputs	[Cyndi, 1500 Illinois St, 20]
+	[2, Jody, CSM				]					[2, 15]			[Jody, CSM, 15				]
+	[3, Billy Joel, New York	]									[Billy Joel, New York, NULL	]
+
+3.) Describe a situation where you might join a table to itself.
+	If you want to match every given subsidary of a group, when the table references within itself.  For example, when comparing where classmates are a given time.  If the table is joined to itself, using location as the join condition, then the output would have all classmates paired when they are at the same location.
