@@ -1,0 +1,17 @@
+Books
+	ISBN
+	Title
+	Author
+	DonationID
+
+User
+	Name
+	Username
+	Role
+	Email
+	
+Donation
+	DonationID
+	Username
+	Cause
+	Location
